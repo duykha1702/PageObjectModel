@@ -1,0 +1,29 @@
+package duykha.com.pages.Clients;
+
+import duykha.com.keywords.WebUI;
+import static duykha.com.keywords.WebUI.*;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
+
+import javax.lang.model.element.Name;
+
+public class ClientDetailsPage extends AddNewClientPage {
+    private WebDriver driver;
+    By clientInfo = By.xpath("//a[normalize-space()='Client info']");
+    public ClientDetailsPage(WebDriver _driver){
+        super(_driver);
+        driver = _driver;
+        new WebUI(driver);
+
+    }
+    public void checkClientDetails(){
+        WebUI.waitForPageLoaded();
+       driver.findElement(clientInfo).click();
+       WebUI.sleep(4);
+        Assert.assertEquals(getAttributeElement(inputName,"value"), "hongmai");
+        Assert.assertEquals(getAttributeElement(inputCity,"value"), "TPHCM");
+        Assert.assertEquals(getAttributeElement(inputCountry,"value"), "vietnam");
+
+    }
+}
