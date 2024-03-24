@@ -16,11 +16,6 @@ public class ClientsPage {
 
     private By tdName = By.xpath("//table[@id='client-table']//tbody/tr/td[2]");
     private By client = By.xpath("//a[@role='presentation'][normalize-space()='Clients']");
-    private WebDriver driver;
-    public ClientsPage(WebDriver _driver){
-        driver = _driver;
-        new WebUI(driver);
-    }
 
     public void verifyClientPage(){
         //Kiem tra cai URL
@@ -33,7 +28,7 @@ public class ClientsPage {
         WebUI.waitforElementVisible(buttonAddClient,10);
        clickElement(buttonAddClient);
 
-        return new AddNewClientPage(driver);
+        return new AddNewClientPage();
     }
     public void searchClient(String NAME){
         WebUI.sleep(3);
@@ -48,7 +43,7 @@ public class ClientsPage {
         WebUI.sleep(3);
        clickElement(tdName);
         WebUI.sleep(3);
-        return new ClientDetailsPage(driver);
+        return new ClientDetailsPage();
 
     }
 }

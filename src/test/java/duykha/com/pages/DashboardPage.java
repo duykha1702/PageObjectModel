@@ -14,20 +14,14 @@ public class DashboardPage {
     private String PAGE_TEXT = "Dashboard";
 
     By menuClient = By.xpath("//a[@href='https://rise.fairsketch.com/clients']");
-   // By menuAllStaffs = By.xpath("//span[normalize-space()='All staffs']");
 
 
 
-    //Các  Object
 
 
-    //Hàm xây dựng
-    private WebDriver driver;
-    public DashboardPage(WebDriver _driver){
-        driver = _driver;
-        new WebUI(driver);
 
-    }
+
+
 
     public void verifyDashboardPage(){
         //Kiem tra cai URL
@@ -41,7 +35,7 @@ public class DashboardPage {
        WebUI.sleep(3);
 
         clickElement(menuClient);
-        return new ClientsPage(driver);
+        return new ClientsPage();
 
     }
 

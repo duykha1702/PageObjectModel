@@ -22,13 +22,7 @@ public class AddNewClientPage extends ClientsPage {
     By inputPhone = By.xpath("//input[@id='phone']");
 
     By clickonSave = By.xpath("//button[@type='submit']");
-    private WebDriver driver;
-    public AddNewClientPage(WebDriver _driver) {
-        super(_driver); //Tuân theo cấu trúc hàm xây dựng của th cha(AllProductsPage)
-        driver = _driver; //Khởi tạo driver của th con (AddNewProductPage)
-        new WebUI(driver); //Khoi tao class WebUI  de truyen gia tri
 
-   }
     public void addDataNewClient(String NAME){
 
         WebUI.sleep(3);

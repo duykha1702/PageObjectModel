@@ -73,6 +73,53 @@
             <artifactId>webdrivermanager</artifactId>
             <version>5.6.2</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>5.2.5</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>5.2.5</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.15.1</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.github.stephenc.monte/monte-screen-recorder -->
+        <dependency>
+            <groupId>com.github.stephenc.monte</groupId>
+            <artifactId>monte-screen-recorder</artifactId>
+            <version>0.7.7.0</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>2.23.1</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-api -->
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+            <version>2.23.1</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+        <dependency>
+            <groupId>com.aventstack</groupId>
+            <artifactId>extentreports</artifactId>
+            <version>5.1.1</version>
+        </dependency>
+
+
 
 
     </dependencies>

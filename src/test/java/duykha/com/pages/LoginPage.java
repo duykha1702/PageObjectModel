@@ -1,5 +1,6 @@
 package duykha.com.pages;
 
+import duykha.com.helpers.PropertiesHelper;
 import duykha.com.keywords.WebUI;
 import static duykha.com.keywords.WebUI.*;
 import org.openqa.selenium.By;
@@ -20,11 +21,6 @@ public class LoginPage {
 
 
     //Hàm xây dựng để truyền vào driver
-    private WebDriver driver;
-    public LoginPage(WebDriver _driver) {
-        driver = _driver;
-        new WebUI(driver);
-    }
 
     //Viết các hàm xử lý cho trang Login
     public void verifyHeaderPage(){
@@ -33,15 +29,15 @@ public class LoginPage {
     }
 
     public void verifyErrorMessageDisplay(){
-        Assert.assertTrue(driver.findElement(messageErrorEmail).isDisplayed(),"FAIL.ErrorMessage no display");
+        //Assert.assertTrue(driver.findElement(messageErrorEmail).isDisplayed(),"FAIL.ErrorMessage no display");
         Assert.assertEquals(getTextElement(messageErrorEmail),"Invalid login credentials1","FAIL.ErrorMessage no match");
 
     }
     public void clearEmail(String email){
-        driver.findElement(inputEmail).clear();
+        clearElement(inputEmail);
     }
     public void clearPassword(String password){
-        driver.findElement(inputPassword).clear();
+        clearElement(inputPassword);
     }
 
     public void enterEmail(String email){
@@ -63,14 +59,14 @@ public class LoginPage {
 
 
     public DashboardPage login(String email, String password){
-        openURL(URL);
+        openURL(PropertiesHelper.getValue("url"));
         verifyHeaderPage();
         clearEmail(email);
         clearPassword(password);
         enterEmail(email);
         enterPassword(password);
         clickOnLoginButton();
-        return new DashboardPage(driver);
+        return new DashboardPage();
 
     }
     public void loginInvalidEmail(String email, String password){

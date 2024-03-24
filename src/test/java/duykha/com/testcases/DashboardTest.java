@@ -14,7 +14,7 @@ public class DashboardTest extends BaseTest {
         ClientsPage productsPage;
     @Test
     public void testOpenClientPage(){
-        loginPage = new LoginPage(driver);
+        loginPage = new LoginPage();
 
         //Lien ket trang được xảy ra nhờ hàm Login trả về là sự khoiwr tạo của trang Dashboards
         dashboardPage= loginPage.login("admin@demo.com","riseDemo");

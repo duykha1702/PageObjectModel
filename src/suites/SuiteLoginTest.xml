@@ -10,14 +10,5 @@
         </classes>
     </test>
 
-    <test name="Login on Chrome">
-        <parameter name="browser" value="chrome"/>
-        <classes>
-
-            <class name="duykha.com.testcases.LoginTest"/>
-
-        </classes>
-    </test>
-
 
 </suite>

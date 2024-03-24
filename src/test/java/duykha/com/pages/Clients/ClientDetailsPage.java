@@ -9,17 +9,12 @@ import org.testng.Assert;
 import javax.lang.model.element.Name;
 
 public class ClientDetailsPage extends AddNewClientPage {
-    private WebDriver driver;
-    By clientInfo = By.xpath("//a[normalize-space()='Client info']");
-    public ClientDetailsPage(WebDriver _driver){
-        super(_driver);
-        driver = _driver;
-        new WebUI(driver);
 
-    }
+    By clientInfo = By.xpath("//a[normalize-space()='Client info']");
+
     public void checkClientDetails(){
         WebUI.waitForPageLoaded();
-       driver.findElement(clientInfo).click();
+       clickElement(clientInfo);
        WebUI.sleep(4);
         Assert.assertEquals(getAttributeElement(inputName,"value"), "hongmai");
         Assert.assertEquals(getAttributeElement(inputCity,"value"), "TPHCM");
